@@ -1,0 +1,88 @@
+<Java Programming Basic>
+
+Chapter#1. Starting JAVA 
+    [1] JAVA Programming
+        1. The process of execution of Java program
+            - Compiletime Environment
+                1) Java Class File (.java)
+                2) Java Compiler
+                    a. The Java Compiler converts Java source code written in Java into Java Byte Code that the JVM can understand.
+                    b. The Java Compiler is installed in the form of an executable file called 'javac.exe' when Java is installed.
+                3) Java Byte Code (.class)
+                    a. The Java Byte Code refers to Java source code converted into a language that the JVM can understand.
+                    b. The extension of Java Byte Code is '.class'.
+                    c. Java Byte Code can be executed on any OS as long as the JVM is installed.
+            - Runtime Environment
+                4) Class Loader 
+                4-1) Java Class Library File
+                5) Java Interpreter & JIT Compiler (Java Virtual Machine)
+                6) Runtime System
+                7) OS
+                8) HW
+        2. JVM (Java Virtual Machine)
+            - JVM is a virtual machine for executing Java Byte Code.
+            - All programs written in Java can be executed only in JVM, so JVM must be installed to run Java program.
+            - Pros & Cons 
+                * Pros: Even in different OS, if only JVM is installed, the same Java program can run without any additional action.
+                * Cons: Unlike Java program, JVM is dependent on OS, so it should be installed for each OS. 
+                        Java program have a disadvantage in that their execution speed is relatively slow because they have to go through one more step called JVM than general programs.
+            - Configuration:
+                1) Java Interpreter
+                    * The Java Interpreter is responsible for reading and interpreting the Java Byte Code converted by Java Compiler
+                2) Class Loader
+                    * Java dynamically loads classes, so all code is associated with JVM only at runtime when the program is running.
+                    * The Class Loader is the one that dynamically loads the class.
+                3) JIT (Just-In-Time) Compiler
+                    * JIT: Just-In-Time means a compiler that converts the actual machine language at runtime while the program is running.
+                    * Also called dynamic translation, this technique was developed to speed up the execution of programs.
+                4) Garbage Collector
+                    * JVM automatically reclaims unused memory using a garbage collector.
+    [2] JAVA Program
+        - Java program consists of one or more classes.
+        - These clasees consist of one or more fields or methods.
+        e.g. decalation of fields and method
+            class class_Name {
+                int field1;
+                String field2;
+
+                public void method1() {
+                    System.out.println("Java programming!");
+                }
+            }
+        1. main() method
+            - Once Java program is executed, it first finds main() methode and executes all statements in it in sequence.
+            - Therefore, there must be one class with main() method in one Java program.
+            - Decalation of main()
+                public static void main(String[] args){
+                    ...
+                }
+        2. Statement (명령문)
+            - Statements used to specify the behaviour of a Java program and tell the computer about these behaviours are called statements.
+            - All statements in Java must and with a semicolon (;).
+        3. Comment (주석)
+            - Sing line comment: //
+            - Multiple lines comment: /* */
+    [3] Changes in JAVA8
+        1. Lambda expression: Functional programming
+            - A method is expressed an expression. In other words, it means a function expression that can be executed without an identifier, hence the name of an anonymous function.
+            - When a method is expressed as a lambda expression, the method can be used without creating a class and creating an object.
+            - A lambda expression can be passed as a parameter to a method or returned as the result of a method.
+            - The purpose of these lambda expressions is to reduce the existing unnecessary code and increase the readability of the written code.
+            e.g. creating a thread by using traditional way vs by using a lambda expression
+                new Thread(new Runnable() {
+                    public void run() {
+                        System.out.println("전통적인 방식의 일회용 스레드 생성");
+                    }
+                }).start();
+
+                new Thread(()->{
+                    System.out.package("람다 표현식을 사용한 일회용 스레드 생성")
+                }).start();
+        2. Stream API: Data abstraction
+        3. java.time package: New Date and Time API with Joda-Time
+        4. Nashorn: New engine for JavaScript
+
+Chapter#2. Type
+
+
+
